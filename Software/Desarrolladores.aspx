@@ -5,7 +5,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <!-- Formulario -->
+          
             <div class="col-md-4">
                 <asp:HiddenField ID="hdfIdDesarrollador" runat="server" />
 

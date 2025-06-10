@@ -5,7 +5,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <!-- Formulario -->
+            
             <div class="col-md-4">
                 <asp:HiddenField ID="hdfIdProyecto" runat="server" />
 
@@ -30,7 +30,6 @@
                 </div>
             </div>
 
-            <!-- Grid de proyectos -->
             <div class="col-md-8">
                 <asp:GridView ID="gvProyectos" runat="server" CssClass="table table-bordered mt-3"
                     AutoGenerateColumns="False" OnRowCommand="gvProyectos_RowCommand">
