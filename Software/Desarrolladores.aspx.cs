@@ -20,6 +20,43 @@ namespace Software
             }
         }
 
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                lblMensaje.Text = "El nombre es obligatorio.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtApellido.Text))
+            {
+                lblMensaje.Text = "El apellido es obligatorio.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNacionalidad.Text))
+            {
+                lblMensaje.Text = "La nacionalidad es obligatoria.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEspecialidad.Text))
+            {
+                lblMensaje.Text = "La especialidad es obligatoria.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
+            {
+                lblMensaje.Text = "Debe ingresar un correo electrónico válido.";
+                return false;
+            }
+
+            lblMensaje.Text = ""; // Limpiar mensaje si todo está bien
+            return true;
+        }
+
+
         private void MostrarDesarrolladores()
         {
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
@@ -38,6 +75,8 @@ namespace Software
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 SqlCommand cmd = new SqlCommand("InsertarDesarrollador", conexion);
@@ -55,8 +94,10 @@ namespace Software
 
                 LimpiarCampos();
                 MostrarDesarrolladores();
+                lblMensaje.Text = "Desarrollador guardado correctamente.";
             }
         }
+
 
         protected void gvDesarrolladores_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -94,8 +135,18 @@ namespace Software
             }
         }
 
+        
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            btnGuardar.Visible = true;
+            btnActualizar.Visible = true;
+        }
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 SqlCommand cmd = new SqlCommand("ActualizarDesarrollador", conexion);
@@ -114,16 +165,8 @@ namespace Software
 
                 LimpiarCampos();
                 MostrarDesarrolladores();
-                btnGuardar.Visible = true;
-                btnActualizar.Visible = true;
+                lblMensaje.Text = "Desarrollador actualizado correctamente.";
             }
-        }
-
-        protected void btnCancelar_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-            btnGuardar.Visible = true;
-            btnActualizar.Visible = true;
         }
 
         private void LimpiarCampos()
