@@ -24,10 +24,12 @@
                 <label class="mt-3">Responsable:</label>
                 <asp:DropDownList ID="ddlResponsable" runat="server" CssClass="form-control" />
 
-                <div class="mt-4">
+                <div class="mt-4 d-flex gap-2">
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardar_Click" />
-                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-warning ms-2" OnClick="btnActualizar_Click" />
+                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-warning" OnClick="btnActualizar_Click" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" />
                 </div>
+
             </div>
 
             <div class="col-md-8">

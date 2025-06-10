@@ -20,7 +20,7 @@ namespace Software
             {
                 MostrarProyectos();
                 CargarDesarrolladores();
-                btnActualizar.Visible = false;
+                btnActualizar.Visible = true;
             }
         }
 
@@ -101,7 +101,7 @@ namespace Software
                     item.Selected = true;
                 }
 
-                btnGuardar.Visible = false;
+                btnGuardar.Visible = true;
                 btnActualizar.Visible = true;
             }
             else if (e.CommandName == "Eliminar")
@@ -144,9 +144,17 @@ namespace Software
                 LimpiarCampos();
                 MostrarProyectos();
                 btnGuardar.Visible = true;
-                btnActualizar.Visible = false;
+                btnActualizar.Visible = true;
             }
         }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            btnGuardar.Visible = true;
+            btnActualizar.Visible = true;
+        }
+
 
         private void LimpiarCampos()
         {
