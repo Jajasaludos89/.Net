@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\zanah\\Desktop\\Software\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|c:\\users\\zanah\\desktop\\software\\software\\desarrolladores.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|solutionrelative:software\\desarrolladores.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|c:\\users\\zanah\\desktop\\software\\software\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|solutionrelative:software\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Desarrolladores.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Desarrolladores.aspx.cs",
+              "RelativeDocumentMoniker": "Software\\Desarrolladores.aspx.cs",
+              "ToolTip": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Desarrolladores.aspx.cs",
+              "RelativeToolTip": "Software\\Desarrolladores.aspx.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAiwIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T00:48:03.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Proyectos.aspx",
               "DocumentMoniker": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Proyectos.aspx",
               "RelativeDocumentMoniker": "Software\\Proyectos.aspx",
@@ -42,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Desarrolladores.aspx",
               "DocumentMoniker": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Desarrolladores.aspx",
               "RelativeDocumentMoniker": "Software\\Desarrolladores.aspx",
@@ -54,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Web.config",
               "RelativeDocumentMoniker": "Software\\Web.config",
@@ -67,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Site.Master",
               "DocumentMoniker": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Site.Master",
               "RelativeDocumentMoniker": "Software\\Site.Master",
