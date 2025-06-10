@@ -10,16 +10,16 @@
                 <asp:HiddenField ID="hdfIdProyecto" runat="server" />
 
                 <label>Nombre del Proyecto:</label>
-                <asp:TextBox ID="txtNombreProyecto" runat="server" CssClass="form-control" />
+                <asp:TextBox placeholder="Ingrese el nombre del proyecto" ID="txtNombreProyecto" runat="server" CssClass="form-control" />
 
                 <label class="mt-3">Descripción:</label>
-                <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                <asp:TextBox placeholder="Ingrese la descripcion del proyecto" ID="txtDescripcion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
 
                 <label class="mt-3">Fecha de Inicio:</label>
-                <asp:TextBox ID="txtFechaInicio" runat="server" CssClass="form-control" TextMode="Date" />
+                <asp:TextBox placeholder="Ingrese la Fecha de Inicio" ID="txtFechaInicio" runat="server" CssClass="form-control" TextMode="Date" />
 
                 <label class="mt-3">Fecha de Fin:</label>
-                <asp:TextBox ID="txtFechaFin" runat="server" CssClass="form-control" TextMode="Date" />
+                <asp:TextBox placeholder="Ingrese la Fecha de Finalizacion" ID="txtFechaFin" runat="server" CssClass="form-control" TextMode="Date" />
 
                 <label class="mt-3">Responsable:</label>
                 <asp:DropDownList ID="ddlResponsable" runat="server" CssClass="form-control" />

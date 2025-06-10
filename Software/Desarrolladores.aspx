@@ -9,19 +9,19 @@
                 <asp:HiddenField ID="hdfIdDesarrollador" runat="server" />
 
                 <label>Nombre:</label>
-                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" />
+                <asp:TextBox placeholder="Ingrese su nombre" ID="txtNombre" runat="server" CssClass="form-control" />
 
                 <label class="mt-3">Apellido:</label>
-                <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" />
+                <asp:TextBox placeholder="Ingrese su apellido" ID="txtApellido" runat="server" CssClass="form-control" />
 
                 <label class="mt-3">Nacionalidad:</label>
-                <asp:TextBox ID="txtNacionalidad" runat="server" CssClass="form-control" />
+                <asp:TextBox placeholder="Ingrese su nacionalidad" ID="txtNacionalidad" runat="server" CssClass="form-control" />
 
                 <label class="mt-3">Especialidad:</label>
-                <asp:TextBox ID="txtEspecialidad" runat="server" CssClass="form-control" />
+                <asp:TextBox placeholder="Ingrese su especialidad" ID="txtEspecialidad" runat="server" CssClass="form-control" />
 
                 <label class="mt-3">Email:</label>
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />
+                <asp:TextBox placeholder="Ingrese su correo electronico" ID="txtEmail" runat="server" CssClass="form-control" />
 
                 <div class="mt-4 d-flex gap-2">
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardar_Click" />
