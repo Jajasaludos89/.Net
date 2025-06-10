@@ -5,6 +5,8 @@
 
     <div class="container mt-5">
         <div class="row">
+
+            <asp:Label ID="lblMensaje" runat="server" ForeColor="Red"></asp:Label> <br /><br />
             
             <div class="col-md-4">
                 <asp:HiddenField ID="hdfIdProyecto" runat="server" />

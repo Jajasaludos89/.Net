@@ -24,6 +24,66 @@ namespace Software
             }
         }
 
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombreProyecto.Text))
+            {
+                lblMensaje.Text = "El nombre del proyecto es obligatorio.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                lblMensaje.Text = "La descripción es obligatoria.";
+                return false;
+            }
+
+            DateTime fechaInicio, fechaFin;
+            DateTime hoy = DateTime.Today;
+            DateTime limiteFin = hoy.AddYears(5);
+
+            if (!DateTime.TryParse(txtFechaInicio.Text, out fechaInicio))
+            {
+                lblMensaje.Text = "La fecha de inicio no es válida.";
+                return false;
+            }
+
+            if (!DateTime.TryParse(txtFechaFin.Text, out fechaFin))
+            {
+                lblMensaje.Text = "La fecha de fin no es válida.";
+                return false;
+            }
+
+            if (fechaInicio < hoy)
+            {
+                lblMensaje.Text = "La fecha de inicio no puede ser anterior al día de hoy.";
+                return false;
+            }
+
+            if (fechaFin < fechaInicio)
+            {
+                lblMensaje.Text = "La fecha de fin no puede ser anterior a la fecha de inicio.";
+                return false;
+            }
+
+            if (fechaFin > limiteFin)
+            {
+                lblMensaje.Text = "La fecha de fin no puede ser mayor a 5 años desde hoy.";
+                return false;
+            }
+
+
+            if (string.IsNullOrEmpty(ddlResponsable.SelectedValue))
+            {
+                lblMensaje.Text = "Debe seleccionar un responsable.";
+                return false;
+            }
+
+            lblMensaje.Text = ""; 
+            return true;
+        }
+
+
         private void MostrarProyectos()
         {
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
@@ -60,6 +120,8 @@ namespace Software
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 SqlCommand cmd = new SqlCommand("InsertarProyecto", conexion);
@@ -77,8 +139,10 @@ namespace Software
 
                 LimpiarCampos();
                 MostrarProyectos();
+                lblMensaje.Text = "Proyecto guardado correctamente.";
             }
         }
+
 
         protected void gvProyectos_RowCommand(object sender, System.Web.UI.WebControls.GridViewCommandEventArgs e)
         {
@@ -125,6 +189,8 @@ namespace Software
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
                 SqlCommand cmd = new SqlCommand("ActualizarProyecto", conexion);
@@ -143,10 +209,10 @@ namespace Software
 
                 LimpiarCampos();
                 MostrarProyectos();
-                btnGuardar.Visible = true;
-                btnActualizar.Visible = true;
+                lblMensaje.Text = "Proyecto actualizado correctamente.";
             }
         }
+
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
