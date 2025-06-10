@@ -5,7 +5,6 @@
 
     <div class="container mt-5">
         <div class="row">
-          
             <div class="col-md-4">
                 <asp:HiddenField ID="hdfIdDesarrollador" runat="server" />
 
@@ -22,11 +21,12 @@
                 <asp:TextBox ID="txtEspecialidad" runat="server" CssClass="form-control" />
 
                 <label class="mt-3">Email:</label>
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" />
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />
 
-                <div class="mt-4">
+                <div class="mt-4 d-flex gap-2">
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardar_Click" />
-                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-warning ms-2" OnClick="btnActualizar_Click" />
+                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-warning" OnClick="btnActualizar_Click" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" />
                 </div>
             </div>
 

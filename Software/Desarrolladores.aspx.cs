@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Software
 {
@@ -19,7 +16,7 @@ namespace Software
             if (!IsPostBack)
             {
                 MostrarDesarrolladores();
-                btnActualizar.Visible = false;
+                btnActualizar.Visible = true;
             }
         }
 
@@ -29,6 +26,7 @@ namespace Software
             {
                 SqlCommand cmd = new SqlCommand("ConsultarDesarrolladores", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
+
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -60,7 +58,7 @@ namespace Software
             }
         }
 
-        protected void gvDesarrolladores_RowCommand(object sender, System.Web.UI.WebControls.GridViewCommandEventArgs e)
+        protected void gvDesarrolladores_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "Editar")
             {
@@ -74,7 +72,7 @@ namespace Software
                 txtEspecialidad.Text = row.Cells[4].Text;
                 txtEmail.Text = row.Cells[5].Text;
 
-                btnGuardar.Visible = false;
+                btnGuardar.Visible = true;
                 btnActualizar.Visible = true;
             }
             else if (e.CommandName == "Eliminar")
@@ -117,8 +115,15 @@ namespace Software
                 LimpiarCampos();
                 MostrarDesarrolladores();
                 btnGuardar.Visible = true;
-                btnActualizar.Visible = false;
+                btnActualizar.Visible = true;
             }
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            btnGuardar.Visible = true;
+            btnActualizar.Visible = true;
         }
 
         private void LimpiarCampos()
