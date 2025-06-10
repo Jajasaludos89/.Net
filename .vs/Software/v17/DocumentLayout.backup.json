@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\zanah\\Desktop\\Software\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|c:\\users\\zanah\\desktop\\software\\software\\desarrolladores.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|solutionrelative:software\\desarrolladores.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|c:\\users\\zanah\\desktop\\software\\software\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|solutionrelative:software\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|c:\\users\\zanah\\desktop\\software\\software\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|C:\\Users\\zanah\\Desktop\\Software\\software\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{71413920-1468-418B-A244-C6A5C08E6B03}|Software\\Software.csproj|solutionrelative:software\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Desarrolladores.aspx",
+              "DocumentMoniker": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Desarrolladores.aspx",
+              "RelativeDocumentMoniker": "Software\\Desarrolladores.aspx",
+              "ToolTip": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Desarrolladores.aspx",
+              "RelativeToolTip": "Software\\Desarrolladores.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-10T00:41:46.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Web.config",
               "RelativeDocumentMoniker": "Software\\Web.config",
@@ -35,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Site.Master",
               "DocumentMoniker": "C:\\Users\\zanah\\Desktop\\Software\\Software\\Site.Master",
               "RelativeDocumentMoniker": "Software\\Site.Master",
